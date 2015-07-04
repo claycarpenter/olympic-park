@@ -26,7 +26,7 @@ mixin campCard(camp)
   section.camp-card
     h3= camp.name
 
-    img(src='images/camps/camp-placeholder.jpg')
+    img(src='images/camps/#{camp.photoFilename}.jpg')
 
     .details
       span.camp-details.sites #{camp.details.sites} sites
@@ -141,16 +141,17 @@ html(lang='en-us')
 
       +campCard({
         name: 'Altair',
+        photoFilename: 'camp-placeholder',
         details: {
           sites: 30,
-          open: 'Spring-Fall',
+          open: 'May-Oct',
           elevation: 450,
           fees: '$20 per night, first-come first-serve'
         },
         description: 'Nestled near the Elwha River, Altair Campground offers a combination of riverfront and forest campsites.',
         facilities: [
-          'camper',
           'tent',
+          'camper',
           'restroom',
           'water',
           'hancicap'
