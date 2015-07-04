@@ -1,3 +1,48 @@
+// Mixins
+
+mixin newsletter
+  section.newsletter
+        h2 Newsletter
+
+        p Sign up for our newsletter to get:
+
+        ul
+          li Campground status updates
+          li All the latest park news
+          li Free park guides and itineraries
+          li Features on the best the park has to offer
+
+        p Sign up instantly, unsubscribe anytime.
+
+        input(type='email', placeholder='E-mail address')
+        button Sign Up
+
+mixin reviewQuote(quote, author)
+  blockquote= quote
+
+    cite - #{author}
+
+mixin campCard(camp)
+  section.camp-card
+    h3= camp.name
+
+    img(src='images/camps/camp-placeholder.jpg')
+
+    .details
+      span.camp-details.sites #{camp.details.sites} sites
+      span.camp-details.sites #{camp.details.open}
+      span.camp-details.sites #{camp.details.elevation}' elev.
+
+    p.description= camp.description
+
+    span.camp-details= camp.details.fees
+
+    ul.facilities
+      each facility in camp.facilities
+        li(class=facility)
+
+// Page Content
+
 html(lang='en-us')
   head
     title
@@ -25,21 +70,7 @@ html(lang='en-us')
       p
         | There are few places in the world like Olympic National Park. Within a day you could easily hike from the ruggedly beautiful seashores through verdant Pacific rainforests and up to the majestic peaks of Mount Olympus. With so much to experience you’ll want to stay a while, and there’s no better way than camping. Stay in any of Olympic’s 16 camp sites and surround yourself with good friends and pristine wilderness.
 
-    section.newsletter
-      h2 Newsletter
-
-      p Sign up for our newsletter to get:
-
-      ul
-        li Campground status updates
-        li All the latest park news
-        li Free park guides and itineraries
-        li Features on the best the park has to offer
-
-      p Sign up instantly, unsubscribe anytime.
-
-      input(type='email', placeholder='E-mail address')
-      button Sign Up
+    +newsletter
 
     section.camping
       h2 Camping at Olympic
@@ -93,61 +124,39 @@ html(lang='en-us')
     section.reviews
       h2 Reviews
 
-      blockquote
-        | I fell in love with the park that day. I plan on going back and hiking Hurricane Ridge again. It's a good three hours or more depending on how lost you can get in the beauty. And we will attempt to see Hoh Rainforest again.
+      +reviewQuote(
+        "I fell in love with the park that day. I plan on going back and hiking Hurricane Ridge again. It's a good three hours or more depending on how lost you can get in the beauty. And we will attempt to see Hoh Rainforest again.",
+        "Katrina B.")
 
-        cite - Katrina B.
+      +reviewQuote(
+        "Originally, we were trying to go to the Hoh Rain Forest but when we got to the visitor center the park ranger said it would be a three hour drive. We underestimated the drive from Seattle. He recommended this hike to us over Hoh.",
+        "Katrina B.")
 
-      blockquote
-        | Originally, we were trying to go to the Hoh Rain Forest but when we got to the visitor center the park ranger said it would be a three hour drive. We underestimated the drive from Seattle. He recommended this hike to us over Hoh.
-
-        cite - Katrina B.
-
-      blockquote
-        | There's a discontiguous part of the park along the coast. This was actually the first time I ever saw the Pacific Ocean, and the first time in my adult life I've seen any ocean (despite a fair bit of travelling).
-
-        cite - Adam C.
+      +reviewQuote(
+        "There's a discontiguous part of the park along the coast. This was actually the first time I ever saw the Pacific Ocean, and the first time in my adult life I've seen any ocean (despite a fair bit of travelling).",
+        "Adam C.")
 
     section.campgrounds
 
-      section.camp-card
-        h3 Altair
+      +campCard({
+        name: 'Altair',
+        details: {
+          sites: 30,
+          open: 'Spring-Fall',
+          elevation: 450,
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Nestled near the Elwha River, Altair Campground offers a combination of riverfront and forest campsites.',
+        facilities: [
+          'camper',
+          'tent',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
 
-        img(src='images/camps/camp-placeholder.jpg')
-
-        .details
-          span.camp-details.sites 30 sites
-          span.camp-details.sites Spring-Fall
-          span.camp-details.sites 450' elev.
-
-        p.description
-          | Nestled near the Elwha River, Altair Campground offers a combination of riverfront and forest campsites.
-
-        span.camp-details
-          | $20 per night, first-come first-serve
-
-        ul.facilities
-          li.camper
-          li.tent
-          li.restroom
-          li.water
-          li.handicap
-
-    section.newsletter
-      h2 Newsletter
-
-      p Sign up for our newsletter to get:
-
-      ul
-        li Campground status updates
-        li All the latest park news
-        li Free park guides and itineraries
-        li Features on the best the park has to offer
-
-      p Sign up instantly, unsubscribe anytime.
-
-      input(type='email', placeholder='E-mail address')
-      button Sign Up
+    +newsletter
 
     footer
       a(href='#') Logo
