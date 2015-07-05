@@ -3,41 +3,10 @@
 @import "vendor/normalize";
 @import "vendor/font-awesome";
 
-/*
-  Basic grid foundation.
-*/
+// Import partials.
+@import "partials/grid";
+@import "partials/colors";
 
-.container:after {
-  // Float container fix.
-  content: "";
-  display: table;
-  clear: both;
-}
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
 
-@mixin padded-box {
-  float: left;
-  padding: 0 1%;
-}
-
-@for $i from 1 through 12 {
-  .col-sm-#{$i} {
-      @include padded-box;
-      width: ($i / 12) * 100%;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  @for $i from 1 through 12 {
-    .col-lg-#{$i} {
-        @include padded-box;
-        width: ($i / 12) * 100%;
-    }
-  }
-}
 
