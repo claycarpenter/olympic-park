@@ -23,6 +23,8 @@ mixin reviewQuote(quote, author)
     cite - #{author}
 
 mixin campCard(camp)
+  - var open = camp.details.open ? camp.details.open : 'Year round';
+
   section.camp-card
     h3= camp.name
 
@@ -30,7 +32,7 @@ mixin campCard(camp)
 
     .details
       span.camp-details.sites #{camp.details.sites} sites
-      span.camp-details.sites #{camp.details.open}
+      span.camp-details.sites #{open}
       span.camp-details.sites #{camp.details.elevation}' elev.
 
     p.description= camp.description
@@ -145,10 +147,272 @@ html(lang='en-us')
         details: {
           sites: 30,
           open: 'May-Oct',
-          elevation: 450,
+          elevation: '450',
           fees: '$20 per night, first-come first-serve'
         },
         description: 'Nestled near the Elwha River, Altair Campground offers a combination of riverfront and forest campsites.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Deer Park',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 14,
+          open: 'Jun-Oct',
+          elevation: '5,400',
+          fees: '$15 per night, first-come first-serve'
+        },
+        description: 'At 5,400 feet in elevation, Deer Park boasts mountain views and starry skies. With a steep and winding gravel access road, Deer Park is not RV accessible.',
+        facilities: [
+          'tent',
+          'restroom',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Dosewallips',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 30,
+          elevation: '1,540',
+          fees: 'No fee, first-come first-serve'
+        },
+        description: 'Perfect for secluded tent camping. The access road is washed out 5.5 miles from the campground and it is not vehicle accessible.',
+        facilities: [
+          'tent',
+          'restroom'
+        ]
+      })
+
+      +campCard({
+        name: 'Elwha',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 40,
+          elevation: '390',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Cradled in the Elwha Valley, campers enjoy wooded forests and access to nearby trails.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Fairholme',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 88,
+          open: 'Apr-Oct',
+          elevation: '580',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Neighboring Lake Crescent, Fairholme includes lakeside campsites and a nearby boat launch.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Graves Creek',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 30,
+          elevation: '580',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Located in the Quinault Rain Forest, relax near a serene stream at Graves Creek Campground.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Heart O\’the Hills',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 105,
+          elevation: '1,807',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Surrounded by old growth forest, Heart O\'the Hills offers summer ranger programs and great family fun.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Hoh',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 88,
+          elevation: '578',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Surround yourself with moss and ancient trees in this temperate rain forest. Hoh campground offers summer ranger programs and some riverside campsites along the Hoh River.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Kalaloch',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 170,
+          elevation: '50',
+          fees: '$18-22 per night, first-come first-serve; RSVP during Summer season'
+        },
+        description: 'Oceanside camp at Kalaloch with some sites overlooking the Pacific Ocean.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Mora',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 94,
+          elevation: '32',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Situated in a coastal forest, some sites offer views of the Quillayute River. Mora is located two miles from Rialto Beach.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'North Fork',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 9,
+          elevation: '520',
+          fees: '$15 per night, first-come first-serve'
+        },
+        description: 'Surrounded by temperate rain forest, this small and remote campground is a great spot for campers seeking solitude.',
+        facilities: [
+          'tent',
+          'restroom',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Ozette',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 15,
+          elevation: '40',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Adjacent to Lake Ozette, this small campground is great for those that enjoy lakeside camping and water activities.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Queets',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 20,
+          elevation: '290',
+          fees: '$15 per night, first-come first-serve'
+        },
+        description: 'Relax in this secluded campground near the Queets River. This campground is only accessible from the Upper Queets River Road due to a past mudslide.',
+        facilities: [
+          'tent',
+          'restroom',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Sol Duc',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 82,
+          elevation: '1,680',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Enjoy riverside camping in old-growth forest at Sol Duc. Ranger programs offered in the summer and nearby the Sol Duc Hot Springs Resort.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'South Beach',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 50,
+          open: 'May-Sep',
+          elevation: '50',
+          fees: '$15 per night, first-come first-serve'
+        },
+        description: 'Positioned on a bluff overlooking the Pacific Ocean, South Beach offers panoramic ocean views and beach access.',
+        facilities: [
+          'tent',
+          'camper',
+          'restroom',
+          'water',
+          'hancicap'
+        ]
+      })
+
+      +campCard({
+        name: 'Staircase',
+        photoFilename: 'camp-placeholder',
+        details: {
+          sites: 56,
+          elevation: '765',
+          fees: '$20 per night, first-come first-serve'
+        },
+        description: 'Camp near the Skokomish River and enjoy old-growth forest at Staircase. Summer ranger programs and riverside campsites available.',
         facilities: [
           'tent',
           'camper',
