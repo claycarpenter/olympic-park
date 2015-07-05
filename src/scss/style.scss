@@ -1,11 +1,10 @@
 
 // Import vendor stylesheets.
-@import "normalize";
-@import "font-awesome";
-
+@import "vendor/normalize";
+@import "vendor/font-awesome";
 
 /*
-    Basic grid foundation.
+  Basic grid foundation.
 */
 
 .container:after {
