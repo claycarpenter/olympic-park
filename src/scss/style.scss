@@ -4,6 +4,8 @@
 @import "vendor/font-awesome";
 
 // Import partials.
+@import "partials/variables";
+@import "partials/respond-to";
 @import "partials/grid";
 @import "partials/colors";
 @import "partials/fonts";

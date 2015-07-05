@@ -33,7 +33,7 @@
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: $break-lg) {
   @for $i from 1 through 12 {
     .col-lg-#{$i} {
         @include padded-box;

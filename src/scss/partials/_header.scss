@@ -30,27 +30,46 @@ header {
   }
 
   .hamburger {
-    float: right;
+    @include respond-to(small) {
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+    @include respond-to(medium) {
+      display: none;
+    }
   }
 
   ul {
     list-style-type: none;
     padding: 0 0 10px 0;
     margin: 0 auto;
-    display: none;
-    width: 100px;
+
+    @include respond-to(small, true) {
+      display: none;
+      width: 100px;
+    }
+
+    @include respond-to(medium) {
+      display: inline-block;
+      float: right;
+      padding-bottom: 0;
+    }
 
     font-size: 24px;
     line-height: 36px;
 
     li {
-//      display: inline-block;
       text-align: center;
       padding-right: 10px;
 
-//      &:last-of-type {
-//        padding-right: 0;
-//      }
+      @include respond-to(medium) {
+        display: inline-block;
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+      }
     }
   }
 }
