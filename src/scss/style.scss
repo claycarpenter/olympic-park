@@ -7,6 +7,7 @@
 @import "partials/grid";
 @import "partials/colors";
 @import "partials/fonts";
+@import "partials/header";
 
 body {
   background-color: $tan;
@@ -17,33 +18,8 @@ body {
   line-height: 150%;
 }
 
-header {
-  background-color: $dark-green;
-  position: relative;
-
+h1,
+h2,
+h3 {
   font-family: "CanterBold";
-  font-size: 18px;
-  height: 26px;
-
-  vertical-align: middle;
-
-  a {
-    text-decoration: none;
-    color: $tan;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-
-    position: absolute;
-    right: 0;
-
-    li {
-      display: inline-block;
-      padding-right: 10px;
-    }
-  }
 }

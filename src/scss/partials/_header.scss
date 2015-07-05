@@ -1,0 +1,56 @@
+$header-height: 30px;
+
+header {
+  background-color: rgba($dark-green, 0.9);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+//  height: $header-height;
+
+  padding: 0 10px;
+
+  font-family: "CanterBold";
+  font-size: 16px;
+  line-height: $header-height;
+
+  vertical-align: middle;
+
+  .fa {
+    // Vertically center hamburger icon.
+    line-height: $header-height - 2px;
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tan;
+  }
+
+  .hamburger {
+    float: right;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0 0 10px 0;
+    margin: 0 auto;
+    display: none;
+    width: 100px;
+
+    font-size: 24px;
+    line-height: 36px;
+
+    li {
+//      display: inline-block;
+      text-align: center;
+      padding-right: 10px;
+
+//      &:last-of-type {
+//        padding-right: 0;
+//      }
+    }
+  }
+}
