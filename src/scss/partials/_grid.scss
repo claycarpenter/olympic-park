@@ -2,7 +2,13 @@
   Basic grid foundation.
 */
 
-.container:after {
+.container {
+  width: auto;
+  margin: 0 auto;
+}
+
+.container:after,
+.row:after {
   // Float container fix.
   content: "";
   display: table;
