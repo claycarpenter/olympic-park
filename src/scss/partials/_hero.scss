@@ -1,6 +1,7 @@
 .hero {
   background-repeat: no-repeat;
   background-position: 50% 0;
+  position: relative;
 
   @include respond-to(small) {
     height: 390px;
@@ -18,7 +19,7 @@
     position: relative;
     margin: 0 auto;
 
-    top: 120px;
+    top: 100px;
     width: 195px;
 
     @include respond-to(medium) {
@@ -69,4 +70,16 @@
       }
     }
   }
+
+  .bottom-band {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-top: 2px solid $dark-green;
+    border-bottom: 2px solid $dark-green;
+    background-color: $tan;
+  }
 }
+

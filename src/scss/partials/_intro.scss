@@ -1,0 +1,44 @@
+
+.intro {
+  width: 300px;
+
+  @include respond-to(medium) {
+    width: 640px;
+  }
+
+  @include respond-to(large) {
+    width: 840px;
+  }
+
+  padding: 0;
+
+  border: 2px solid $dark-green;
+  background-color: $tan;
+
+  padding: 10px;
+
+  position: relative;
+  margin: -160px auto 0 auto;
+
+  h2 {
+    padding: 0;
+    margin: 10px 0;
+
+    font-size: 36px;
+
+    @include respond-to(medium) {
+      font-size: 58px;
+      line-height: 80px;
+      margin-top: 0;
+    }
+
+    @include respond-to(large) {
+      font-size: 74px;
+      line-height: 80px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

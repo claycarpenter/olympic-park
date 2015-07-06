@@ -33,6 +33,15 @@
   }
 }
 
+@media only screen and (min-width: $break-md) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+        @include padded-box;
+        width: ($i / 12) * 100%;
+    }
+  }
+}
+
 @media only screen and (min-width: $break-lg) {
   @for $i from 1 through 12 {
     .col-lg-#{$i} {
