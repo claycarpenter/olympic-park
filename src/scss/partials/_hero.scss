@@ -7,18 +7,34 @@
     background-image: url(/images/hero-bg-small.jpg);
   }
 
+  @include respond-to(medium) {
+    height: 630px;
+    background-image: url(/images/hero-bg-large.jpg);
+  }
+
   .title {
     color: white;
 
     position: relative;
-    top: 120px;
     margin: 0 auto;
+
+    top: 120px;
     width: 195px;
+
+    @include respond-to(medium) {
+      width: 350px;
+      top: 210px;
+    }
 
     h1, h3 {margin: 0;}
 
     h1 {
       font-size: 77px;
+
+      @include respond-to(medium) {
+        font-size: 144px;
+      }
+
       position: absolute;
 
       &.stripes {
@@ -30,15 +46,26 @@
     h3 {
       color: $tan;
       position: relative;
+
       top: 1.15em;
       left: .2em;
       font-size: 48px;
+
+      @include respond-to(medium) {
+        top: 1.5em;
+        font-size: 64px;
+      }
     }
 
     .olympic {
       position: relative;
-      top: 3em;
       left: 3.2em;
+      top: 3em;
+
+      @include respond-to(medium) {
+        left: 4em;
+        top: 7em;
+      }
     }
   }
 }
