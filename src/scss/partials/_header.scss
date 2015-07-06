@@ -18,9 +18,22 @@ header {
 
   vertical-align: middle;
 
+  .logo {
+      background: url(/images/logo.svg);
+      background-size: 23px 23px;
+      padding-left: 30px;
+      background-repeat: no-repeat;
+      height: 30px;
+      display: inline-block;
+      margin-top: 3px;
+      font-size: 20px;
+      line-height: $header-height + 2px;
+      background-position: 0 2px;
+  }
+
   .fa {
     // Vertically center hamburger icon.
-    line-height: $header-height - 2px;
+    line-height: $header-height + 2px;
     font-size: 16px;
   }
 
