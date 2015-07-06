@@ -1,0 +1,44 @@
+.hero {
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @include respond-to(small) {
+    height: 390px;
+    background-image: url(/images/hero-bg-small.jpg);
+  }
+
+  .title {
+    color: white;
+
+    position: relative;
+    top: 120px;
+    margin: 0 auto;
+    width: 195px;
+
+    h1, h3 {margin: 0;}
+
+    h1 {
+      font-size: 77px;
+      position: absolute;
+
+      &.stripes {
+        font-family: "CanterBoldStripes";
+        color: rgba($tan, 0.6);
+      }
+    }
+
+    h3 {
+      color: $tan;
+      position: relative;
+      top: 1.15em;
+      left: .2em;
+      font-size: 48px;
+    }
+
+    .olympic {
+      position: relative;
+      top: 3em;
+      left: 3.2em;
+    }
+  }
+}

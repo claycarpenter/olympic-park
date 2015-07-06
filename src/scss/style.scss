@@ -3,13 +3,17 @@
 @import "vendor/normalize";
 @import "vendor/font-awesome";
 
-// Import partials.
+// Generic partials.
 @import "partials/variables";
 @import "partials/respond-to";
 @import "partials/grid";
 @import "partials/colors";
 @import "partials/fonts";
+
+// Section partials.
 @import "partials/header";
+@import "partials/hero";
+
 
 body {
   background-color: $tan;

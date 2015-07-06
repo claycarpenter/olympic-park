@@ -48,7 +48,7 @@ mixin campCard(camp)
 html(lang='en-us')
   head
     title
-      | Olympic National Park
+      | Camping at Olympic National Park
 
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(charset='utf-8')
@@ -76,7 +76,14 @@ html(lang='en-us')
 
     main
       .hero
-        h1 Camping at Olympic
+        .title
+          span.camping
+            h1 Camping
+            h1.stripes Camping
+          h3 at
+          span.olympic
+            h1 Olympic
+            h1.stripes Olympic
 
       section.intro
         h2 Adventure, Exploration, Fun.
