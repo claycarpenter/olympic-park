@@ -27,9 +27,9 @@
     font-size: 36px;
 
     @include respond-to(medium) {
-      font-size: 58px;
-      line-height: 80px;
-      margin-top: 0;
+      font-size: 60px;
+      line-height: 83px;
+      margin: 0;
     }
 
     @include respond-to(large) {
