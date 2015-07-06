@@ -2,22 +2,26 @@
 
 mixin newsletter
   section.newsletter
-        .title
-          h2 Newsletter
-          h2.header-stripes Newsletter
+        .title-container
+          .title
+            h2.overlay-text-header Newsletter
+            h2.overlay-text-header.header-stripes Newsletter
 
-        p Sign up for our newsletter to get:
+        .container.sign-up
+          .col-sm-12.col-md-6
+            p Sign up for our newsletter to get:
 
-        ul
-          li Campground status updates
-          li All the latest park news
-          li Free park guides and itineraries
-          li Features on the best the park has to offer
+            ul.circle-bullet-list
+              li Campground status updates
+              li All the latest park news
+              li Free park guides and itineraries
+              li Features on the best the park has to offer
 
-        p Sign up instantly, unsubscribe anytime.
+          .col-sm-12.col-md-6
+            p Sign up instantly, unsubscribe anytime.
 
-        input(type='email', placeholder='E-mail address')
-        button Sign Up
+            input(type='email', placeholder='E-mail address')
+            button Sign Up
 
 mixin reviewQuote(quote, author)
   blockquote= quote

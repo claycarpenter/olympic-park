@@ -1,0 +1,119 @@
+
+.newsletter {
+  background-color: $dark-green;
+  color: $tan;
+  padding: 10px;
+
+  margin-top: 20px;
+
+//  text-align: center;
+
+  .title {
+    width: 120px;
+    margin: 0 auto;
+
+//    display: inline-block;
+//    text-align: center;
+//    position: relative;
+
+    h2 {
+      display: inline-block;
+
+      margin-top: 10px;
+      font-size: 40px;
+
+      @include respond-to(medium) {
+        font-size: 58px;
+      }
+    }
+  }
+
+  .sign-up {
+    width: 300px;
+
+    @include respond-to(medium) {
+      width: 640px;
+    }
+
+    margin: 40px auto 0 auto;
+    padding-bottom: 5px;
+  }
+
+  .circle-bullet-list {
+    list-style-type: none;
+
+    margin: 0 0 0 10px;
+    padding: 0;
+
+    li {
+      background-image: url(/images/tan-bullet.svg);
+      background-repeat: no-repeat;
+      background-position: 0 3px;
+      background-size: 12px;
+
+      @include respond-to(medium) {
+        background-position: 0 6px;
+        background-size: 15px;
+      }
+
+      padding-left: 20px;
+
+      margin-bottom: .6em;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  $form-element-height: 40px;
+
+  input[type='email'] {
+    width: 100%;
+    height: $form-element-height;
+
+    @include respond-to(medium) {
+      height: 60px;
+    }
+
+    background-color: $tan;
+    border: 2px solid darken($tan, 60%);
+
+    padding-left: 10px;
+    color: darken($tan, 70%);
+
+    &::-webkit-input-placeholder {
+      color: darken($tan, 50%);
+    }
+    &::-moz-input-placeholder {
+      color: darken($tan, 50%);
+    }
+    &:-ms-input-placeholder {
+      color: darken($tan, 50%);
+    }
+  }
+
+  button {
+    width: 100%;
+    height: $form-element-height;
+    margin-top: 10px;
+
+    background-color: $orange;
+    border: 2px solid darken($orange, 10%);
+
+    &:active {
+      border: 2px solid lighten($orange, 10%);
+    }
+
+    font-family: "CanterBold";
+    font-size: 24px;
+    line-height: $form-element-height;
+
+    @include respond-to(medium) {
+      margin-top: 20px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 32px;
+    }
+  }
+}

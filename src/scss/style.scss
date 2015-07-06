@@ -14,6 +14,7 @@
 @import "partials/header";
 @import "partials/hero";
 @import "partials/intro";
+@import "partials/newsletter";
 
 
 body {
@@ -38,4 +39,9 @@ h1,
 h2,
 h3 {
   font-family: "CanterBold";
+}
+
+input:focus,
+button:focus {
+  outline: none;
 }

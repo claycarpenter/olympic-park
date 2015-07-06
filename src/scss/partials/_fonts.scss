@@ -13,7 +13,14 @@
   src: url("../fonts/Canter_Bold_Stripes.woff");
 }
 
+.overlay-text-header {
+  position: absolute;
+}
+
 .header-stripes {
+  position: absolute;
+//  top: 0;
+//  left: .5%;
   font-family: "CanterBoldStripes";
   color: rgba($tan, 0.6);
 }
