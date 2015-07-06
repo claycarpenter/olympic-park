@@ -52,7 +52,8 @@
       font-size: 48px;
 
       @include respond-to(medium) {
-        top: 1.5em;
+        top: 90px;
+        left: 20px;
         font-size: 64px;
       }
     }
@@ -63,8 +64,8 @@
       top: 3em;
 
       @include respond-to(medium) {
-        left: 4em;
-        top: 7em;
+        left: 60px;
+        top: 85px;
       }
     }
   }
