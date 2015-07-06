@@ -1,7 +1,7 @@
 $header-height: 30px;
 
-header {
-  background-color: rgba($dark-green, 0.9);
+.nav-header {
+  background-color: rgba($dark-green, 0.7);
 
   position: fixed;
   top: 0;
@@ -99,6 +99,14 @@ header {
           padding-right: 0;
         }
       }
+    }
+  }
+
+  &.open-menu {
+    background-color: rgba($dark-green, 0.9);
+
+    ul {
+      display: block;
     }
   }
 }
