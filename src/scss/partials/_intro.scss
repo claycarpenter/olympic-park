@@ -1,13 +1,13 @@
 
 .intro {
-  width: 300px;
+  width: $content-sm;
 
   @include respond-to(medium) {
-    width: 640px;
+    width: $content-md;
   }
 
   @include respond-to(large) {
-    width: 840px;
+    width: $content-lg;
   }
 
   padding: 0;

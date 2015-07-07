@@ -20,18 +20,26 @@
       @include respond-to(medium) {
         font-size: 58px;
       }
+
+      @include respond-to(large) {
+        font-size: 64px;
+      }
     }
   }
 
   .sign-up {
-    width: 300px;
+    width: $content-sm;
 
     margin: 40px auto 0 auto;
     padding-bottom: 5px;
 
     @include respond-to(medium) {
-      width: 640px;
+      width: $content-md;
       margin-top: 55px;
+    }
+
+    @include respond-to(large) {
+      width: $content-lg;
     }
   }
 
