@@ -1,11 +1,17 @@
 // Mixins
 
+mixin overlayTitle(title, headerLevel)
+  //- Header level is optional; default to h2.
+  - var headerElt = headerLevel ? headerLevel : 'h2';
+
+  .overlay-text-container
+    h2.header #{title}
+  .overlay-text-container
+    .header.header-stripes #{title}
+
 mixin newsletter
   section.newsletter
-    .overlay-text-container
-      h2.header Newsletter
-    .overlay-text-container
-      .header.header-stripes Newsletter
+    +overlayTitle('Newsletter')
 
     .container.sign-up
       .col-sm-12.col-md-6
