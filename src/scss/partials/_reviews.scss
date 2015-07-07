@@ -4,6 +4,20 @@ section.reviews {
   color: $tan;
   padding: 10px;
 
+  .content {
+    width: $content-sm + 18px;
+
+    @include respond-to(medium) {
+      margin: 60px auto;
+      width: $content-md + 20px;
+    }
+
+    @include respond-to(large) {
+      margin: 60px auto;
+      width: $content-lg + 20px;
+    }
+  }
+
   header {
     margin: -33px auto 0 auto;
     background-color: $tan;
@@ -51,9 +65,10 @@ section.reviews {
 
     border: 1px solid rgba($tan, 0.25);
     margin: 10px 6px;
-    padding: 6px;
-
+    padding: .5em;
     font-style: italic;
+
+
 
     cite {
       text-align: right;
