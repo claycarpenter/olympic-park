@@ -6,24 +6,16 @@
 
   margin-top: 20px;
 
-  .title-container {
-    position: absolute;
-    left: 0;
-    right: 0;
+  .overlay-text-container .header {
+    margin-top: 20px;
+    font-size: 40px;
 
-    h2 {
-      text-align: center;
+    @include respond-to(medium) {
+      font-size: 58px;
+    }
 
-      margin-top: 20px;
-      font-size: 40px;
-
-      @include respond-to(medium) {
-        font-size: 58px;
-      }
-
-      @include respond-to(large) {
-        font-size: 64px;
-      }
+    @include respond-to(large) {
+      font-size: 64px;
     }
   }
 
