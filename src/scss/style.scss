@@ -45,3 +45,33 @@ input:focus,
 button:focus {
   outline: none;
 }
+
+.circle-bullet-list {
+  list-style-type: none;
+
+  margin: 0 0 0 10px;
+  padding: 0;
+
+  &.tan li {
+    background-image: url(/images/tan-bullet.svg);
+  }
+
+  li {
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    background-size: 12px;
+
+    @include respond-to(medium) {
+      background-position: 0 6px;
+      background-size: 15px;
+    }
+
+    padding-left: 20px;
+
+    margin-bottom: .6em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
