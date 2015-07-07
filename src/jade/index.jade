@@ -29,12 +29,12 @@ mixin newsletter
         input(type='email', placeholder='E-mail address')
         button Sign Up
 
-mixin reviewQuote(quote, author)
+mixin reviewQuote(quote, author, sourceUrl)
   blockquote= quote
 
     cite
       | -
-      a.tan(href='#') #{author}
+      a.tan(href='#{sourceUrl}') #{author}
 
 mixin campCard(camp)
   - var open = camp.details.open ? camp.details.open : 'Year round';
@@ -170,15 +170,18 @@ html(lang='en-us')
         .content
           +reviewQuote(
             "I fell in love with the park that day. I plan on going back and hiking Hurricane Ridge again. It's a good three hours or more depending on how lost you can get in the beauty. And we will attempt to see Hoh Rainforest again.",
-            "Katrina B.")
+            "Katrina B.",
+            "http://www.yelp.com/biz/olympic-national-park-port-angeles?hrid=_OxsuoYCnwg1k496GUpeOg")
 
           +reviewQuote(
-            "Originally, we were trying to go to the Hoh Rain Forest but when we got to the visitor center the park ranger said it would be a three hour drive. We underestimated the drive from Seattle. He recommended this hike to us over Hoh.",
-            "Katrina B.")
+            "Olympic has everything, mountains, rain forest, sea shore. It is amazing! We have been there twice and can't wait to go back!",
+            "Amy C.",
+            "http://www.yelp.com/biz/olympic-national-park-port-angeles?hrid=Doney30J3rSLgLq_30IFtQ")
 
           +reviewQuote(
-            "There's a discontiguous part of the park along the coast. This was actually the first time I ever saw the Pacific Ocean, and the first time in my adult life I've seen any ocean (despite a fair bit of travelling).",
-            "Adam C.")
+            "This is by far, one of the most breathtaking places that I've ever visited.  I don't know what I enjoyed more, Hurricane Ridge or the Hoh Rain Forest!!!!  When you drive all the way to the top of Hurricane Ridge, you just have to walk over to the ledge and take it all in! This place is BEAUTIFUL!!!!",
+            "Michelle T.",
+            "http://www.yelp.com/biz/olympic-national-park-port-angeles?hrid=uWck8eI3cetvE2rkZFTpRg")
 
       section.campgrounds
         h2 Campgrounds
