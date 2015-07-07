@@ -1,0 +1,36 @@
+
+// Icons
+
+@mixin camp-icon($icon-name) {
+  background-image: url(/images/#{$icon-name}-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  width: 25px;
+  height: 25px;
+
+  display: inline-block;
+}
+
+.handicap-icon {
+  @include camp-icon(handicap);
+}
+
+.restroom-icon {
+  @include camp-icon(restroom);
+}
+
+.rv-icon {
+  @include camp-icon(rv);
+}
+
+.tent-icon {
+  @include camp-icon(tent);
+}
+
+.water-icon {
+  @include camp-icon(water);
+}
+
+.facilities {
+  list-style-type: none;
+}
