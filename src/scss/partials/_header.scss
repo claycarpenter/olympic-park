@@ -52,7 +52,10 @@ $header-height: 30px;
     font-size: 16px;
   }
 
-  a {
+  a,
+  a:visited,
+  a:hover,
+  a:active {
     text-decoration: none;
     color: $tan;
   }
