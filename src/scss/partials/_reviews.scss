@@ -1,0 +1,64 @@
+
+section.reviews {
+  background-color: $dark-green;
+  color: $tan;
+  padding: 10px;
+
+  header {
+    margin: -33px auto 0 auto;
+    background-color: $tan;
+    border: 2px solid $dark-green;
+    height: 44px;
+    width: 180px;
+
+    @include respond-to(medium) {
+      margin-top: -43px;
+      width: 320px;
+      height: 60px;
+    }
+
+    @include respond-to(large) {
+      margin-top: -46px;
+      width: 340px;
+      height: 70px;
+    }
+  }
+
+  .overlay-text-container .header {
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 46px;
+
+    color: $dark-green;
+
+    &.header-stripes {
+      color: rgba($dark-green, 0.6);
+    }
+
+    @include respond-to(medium) {
+      font-size: 58px;
+      line-height: 65px;
+    }
+
+    @include respond-to(large) {
+      font-size: 64px;
+      line-height: 77px;
+    }
+  }
+
+  blockquote {
+    @extend .container;
+
+    border: 1px solid rgba($tan, 0.25);
+    margin: 10px 6px;
+    padding: 6px;
+
+    font-style: italic;
+
+    cite {
+      text-align: right;
+      display: block;
+      font-weight: 700;
+    }
+  }
+}

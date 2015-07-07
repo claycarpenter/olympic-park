@@ -16,6 +16,7 @@
 @import "partials/intro";
 @import "partials/newsletter";
 @import "partials/camping";
+@import "partials/reviews";
 @import "partials/campgrounds";
 
 body {
@@ -80,3 +81,34 @@ button:focus {
     }
   }
 }
+
+a {
+  &,
+  &:visited {
+    color: $med-green;
+  }
+
+  &:hover {
+    color: lighten($med-green, 10%);
+  }
+
+  &:active {
+    color: lighten($med-green, 20%);
+  }
+
+  &.tan {
+    &,
+    &:visited {
+      color: $tan;
+    }
+
+    &:hover {
+      color: lighten($tan, 10%);
+    }
+
+    &:active {
+      color: lighten($tan, 20%);
+    }
+  }
+}
+

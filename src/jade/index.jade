@@ -32,7 +32,9 @@ mixin newsletter
 mixin reviewQuote(quote, author)
   blockquote= quote
 
-    cite - #{author}
+    cite
+      | -
+      a.tan(href='#') #{author}
 
 mixin campCard(camp)
   - var open = camp.details.open ? camp.details.open : 'Year round';
@@ -162,7 +164,8 @@ html(lang='en-us')
             | Fees vary by campground, but all are between $15-22 per site per night. Campground fees are separate from and not included in the park entrance. Fees can be paid at campground self-service stations.
 
       section.reviews
-        h2 Reviews
+        header
+          +overlayTitle('Reviews')
 
         +reviewQuote(
           "I fell in love with the park that day. I plan on going back and hiking Hurricane Ridge again. It's a good three hours or more depending on how lost you can get in the beauty. And we will attempt to see Hoh Rainforest again.",
