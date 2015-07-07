@@ -1,3 +1,7 @@
+/*
+  Fonts
+*/
+
 // Import Roboto from Google Web Fonts
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic);
 
@@ -12,6 +16,16 @@
   font-family: "CanterBoldStripes";
   src: url("../fonts/Canter_Bold_Stripes.woff");
 }
+
+// Center Bold 3D
+@font-face {
+  font-family: "CanterBold3D";
+  src: url("../fonts/Canter_Bold_3D.woff");
+}
+
+/*
+  Text styles
+*/
 
 .header-stripes {
   font-family: "CanterBoldStripes";
