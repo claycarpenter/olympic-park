@@ -7,7 +7,13 @@ section.camping {
   width: $content-sm + 18px;
 
   @include respond-to(medium) {
+    margin: 60px auto;
     width: $content-md + 20px;
+  }
+
+  @include respond-to(large) {
+    margin: 60px auto;
+    width: $content-lg + 20px;
   }
 
   p:first-of-type {
@@ -25,6 +31,12 @@ section.camping {
       margin-top: -43px;
       width: 320px;
       height: 60px;
+    }
+
+    @include respond-to(large) {
+      margin-top: -46px;
+      width: 340px;
+      height: 70px;
     }
   }
 
@@ -46,6 +58,7 @@ section.camping {
 
     @include respond-to(large) {
       font-size: 64px;
+      line-height: 77px;
     }
   }
 
@@ -57,6 +70,11 @@ section.camping {
 
     @include respond-to(medium) {
       font-size: 48px;
+      margin-top: 40px;
+    }
+
+    @include respond-to(large) {
+      font-size: 55px;
       margin-top: 40px;
     }
   }
@@ -108,7 +126,8 @@ section.camping {
   }
 
   .circle-bullet-list {
-    margin: 0;
+    margin-left: 0;
+    margin-top: 10px;
 
     @include respond-to(medium) {
       margin-left: 15px;
