@@ -56,6 +56,10 @@ button:focus {
     background-image: url(/images/tan-bullet.svg);
   }
 
+  &.green li {
+    background-image: url(/images/green-bullet.svg);
+  }
+
   li {
     background-repeat: no-repeat;
     background-position: 0 3px;
