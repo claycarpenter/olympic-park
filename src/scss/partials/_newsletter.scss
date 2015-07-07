@@ -6,20 +6,15 @@
 
   margin-top: 20px;
 
-//  text-align: center;
-
-  .title {
-    width: 120px;
-    margin: 0 auto;
-
-//    display: inline-block;
-//    text-align: center;
-//    position: relative;
+  .title-container {
+    position: absolute;
+    left: 0;
+    right: 0;
 
     h2 {
-      display: inline-block;
+      text-align: center;
 
-      margin-top: 10px;
+      margin-top: 20px;
       font-size: 40px;
 
       @include respond-to(medium) {
@@ -31,12 +26,13 @@
   .sign-up {
     width: 300px;
 
-    @include respond-to(medium) {
-      width: 640px;
-    }
-
     margin: 40px auto 0 auto;
     padding-bottom: 5px;
+
+    @include respond-to(medium) {
+      width: 640px;
+      margin-top: 55px;
+    }
   }
 
   .circle-bullet-list {
