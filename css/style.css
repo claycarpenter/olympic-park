@@ -2261,7 +2261,7 @@ td, th {
   line-height: 30px;
   vertical-align: middle; }
   .nav-header .logo {
-    background: url(/images/logo.svg);
+    background: url(../images/logo.svg);
     background-repeat: no-repeat;
     display: inline-block; }
     @media only screen and (min-width: 0)  {
@@ -2330,11 +2330,11 @@ td, th {
   @media only screen and (min-width: 0)  {
     .hero {
       height: 390px;
-      background-image: url(/images/hero-bg-small.jpg); } }
+      background-image: url(../images/hero-bg-small.jpg); } }
   @media only screen and (min-width: 531px)  {
     .hero {
       height: 630px;
-      background-image: url(/images/hero-bg-large.jpg); } }
+      background-image: url(../images/hero-bg-large.jpg); } }
   .hero .title {
     color: white;
     position: relative;
@@ -2707,7 +2707,7 @@ section.campgrounds {
     padding-left: 0; }
 
 .handicap-icon {
-  background-image: url(/images/handicap-icon.svg);
+  background-image: url(../images/handicap-icon.svg);
   background-repeat: no-repeat;
   background-size: 30px;
   width: 30px;
@@ -2720,7 +2720,7 @@ section.campgrounds {
       height: 35px; } }
 
 .restroom-icon {
-  background-image: url(/images/restroom-icon.svg);
+  background-image: url(../images/restroom-icon.svg);
   background-repeat: no-repeat;
   background-size: 30px;
   width: 30px;
@@ -2733,7 +2733,7 @@ section.campgrounds {
       height: 35px; } }
 
 .rv-icon {
-  background-image: url(/images/rv-icon.svg);
+  background-image: url(../images/rv-icon.svg);
   background-repeat: no-repeat;
   background-size: 30px;
   width: 30px;
@@ -2746,7 +2746,7 @@ section.campgrounds {
       height: 35px; } }
 
 .tent-icon {
-  background-image: url(/images/tent-icon.svg);
+  background-image: url(../images/tent-icon.svg);
   background-repeat: no-repeat;
   background-size: 30px;
   width: 30px;
@@ -2759,7 +2759,7 @@ section.campgrounds {
       height: 35px; } }
 
 .water-icon {
-  background-image: url(/images/water-icon.svg);
+  background-image: url(../images/water-icon.svg);
   background-repeat: no-repeat;
   background-size: 30px;
   width: 30px;
@@ -2785,7 +2785,7 @@ body > footer {
     color: #E8E7D3;
     text-decoration: none; }
   body > footer .logo {
-    background: url(/images/logo.svg);
+    background: url(../images/logo.svg);
     background-repeat: no-repeat;
     display: inline-block;
     background-size: 20px;
@@ -2822,9 +2822,9 @@ input:focus, button:focus {
   margin: 0 0 0 10px;
   padding: 0; }
   .circle-bullet-list.tan li {
-    background-image: url(/images/tan-bullet.svg); }
+    background-image: url(../images/tan-bullet.svg); }
   .circle-bullet-list.green li {
-    background-image: url(/images/green-bullet.svg); }
+    background-image: url(../images/green-bullet.svg); }
   .circle-bullet-list li {
     background-repeat: no-repeat;
     background-position: 0 3px;
