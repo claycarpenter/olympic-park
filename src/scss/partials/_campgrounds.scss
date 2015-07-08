@@ -1,12 +1,121 @@
 
+section.campgrounds {
+  margin-top: 30px;
+
+  > header {
+    height: 50px;
+  }
+
+  .overlay-text-container .header {
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 46px;
+
+    color: $dark-green;
+
+    &.header-stripes {
+      color: rgba($dark-green, 0.6);
+    }
+
+    @include respond-to(medium) {
+      font-size: 58px;
+      line-height: 65px;
+    }
+
+    @include respond-to(large) {
+      font-size: 64px;
+      line-height: 77px;
+    }
+  }
+
+  .camp-cards {
+    @extend .container;
+
+    margin-top: 10px;
+  }
+}
+
+.camp-card section {
+  border: 2px solid $dark-green;
+  padding: 10px;
+//  height: 320px;
+  width: 320px;
+
+  margin: 20px auto;
+
+  h3 {
+    margin: -33px auto 0 auto;
+    background-color: $tan;
+    border: 2px solid $dark-green;
+    height: 44px;
+    width: 140px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 44px;
+
+    @include respond-to(medium) {
+      margin-top: -43px;
+      width: 240px;
+      height: 60px;
+    }
+
+    @include respond-to(large) {
+      margin-top: -46px;
+      width: 340px;
+      height: 70px;
+    }
+  }
+
+  img {
+    margin: 10px 0 10px 0;
+    border: 1px solid $dark-green;
+    text-align: center;
+
+    width: 296px;
+  }
+
+  .description {
+    margin: .5em 0;
+  }
+
+  .details {
+    @extend .container;
+
+    .camp-details {
+      display: inline-block;
+    }
+
+    .open {
+      text-align: center;
+    }
+
+    .elev {
+      text-align: right;
+    }
+  }
+
+  .camp-details {
+    font-style: italic;
+    color: $med-green;
+  }
+
+  .facilities {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
 // Icons
 
 @mixin camp-icon($icon-name) {
   background-image: url(/images/#{$icon-name}-icon.svg);
   background-repeat: no-repeat;
-  background-size: 25px;
-  width: 25px;
-  height: 25px;
+
+  $size: 30px;
+  background-size: $size;
+  width: $size;
+  height: $size;
 
   display: inline-block;
 }
