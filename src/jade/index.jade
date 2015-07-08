@@ -72,24 +72,25 @@ html(lang='en-us')
   body
     header.nav-header.container
       .row
-        a.logo(href='#') Olympic
+        .logo Olympic
 
-        ul
+        ul.nav-options
           li
-            a(href='#') Adventure
+            a(href='#adventure') Adventure
           li
-            a(href='#') Camping
+            a(href='#camping') Camping
           li
-            a(href='#') Reviews
+            a(href='#reviews') Reviews
           li
-            a(href='#') Campgrounds
+            a(href='#campgrounds') Campgrounds
           li
-            a(href='#') Newsletter
+            a(href='#newsletter') Newsletter
 
         a.hamburger(href='#')
           i.fa.fa-bars
 
     main
+      a(name='adventure')
       .hero
         .title
           span.camping
@@ -110,6 +111,7 @@ html(lang='en-us')
       +newsletter
 
       section.camping
+        a(name='camping')
         header
           +overlayTitle('Camping at Olympic')
 
@@ -165,6 +167,7 @@ html(lang='en-us')
             | Fees vary by campground, but all are between $15-22 per site per night. Campground fees are separate from and not included in the park entrance. Fees can be paid at campground self-service stations.
 
       section.reviews
+        a(name='reviews')
         header
           +overlayTitle('Reviews')
 
@@ -185,6 +188,7 @@ html(lang='en-us')
             "http://www.yelp.com/biz/olympic-national-park-port-angeles?hrid=uWck8eI3cetvE2rkZFTpRg")
 
       section.campgrounds
+        a(name='campgrounds')
         header
           +overlayTitle('Campgrounds')
 
@@ -470,10 +474,12 @@ html(lang='en-us')
             ]
           })
 
+
+      a(name='newsletter')
       +newsletter
 
     footer
-      a.logo(href='#') Olympic
+      .logo Olympic
       a.about(href='#') About
 
     script(src='js/vendor/jquery-2.1.4.js')
