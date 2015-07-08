@@ -2283,7 +2283,7 @@ td, th {
   .nav-header .fa {
     line-height: 32px;
     font-size: 16px; }
-  .nav-header a, .nav-header a:visited, .nav-header a:hover, .nav-header a:active {
+  .nav-header, .nav-header a, .nav-header a:visited, .nav-header a:hover, .nav-header a:active {
     text-decoration: none;
     color: #E8E7D3; }
   @media only screen and (min-width: 0)  {

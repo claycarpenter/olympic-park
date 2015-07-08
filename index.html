@@ -10,17 +10,18 @@
   </head>
   <body>
     <header class="nav-header container">
-      <div class="row"><a href="#" class="logo">Olympic</a>
-        <ul>
-          <li><a href="#">Adventure</a></li>
-          <li><a href="#">Camping</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Campgrounds</a></li>
-          <li><a href="#">Newsletter</a></li>
+      <div class="row">
+        <div class="logo">Olympic</div>
+        <ul class="nav-options">
+          <li><a href="#adventure">Adventure</a></li>
+          <li><a href="#camping">Camping</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#campgrounds">Campgrounds</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
         </ul><a href="#" class="hamburger"><i class="fa fa-bars"></i></a>
       </div>
     </header>
-    <main>
+    <main><a name="adventure"></a>
       <div class="hero">
         <div class="title"><span class="camping">
             <h1>Camping</h1>
@@ -59,7 +60,7 @@
           </div>
         </div>
       </section>
-      <section class="camping">
+      <section class="camping"><a name="camping"></a>
         <header>
           <div class="overlay-text-container">
             <h2 class="header">Camping at Olympic</h2>
@@ -107,7 +108,7 @@
           <p>Fees vary by campground, but all are between $15-22 per site per night. Campground fees are separate from and not included in the park entrance. Fees can be paid at campground self-service stations.</p>
         </section>
       </section>
-      <section class="reviews">
+      <section class="reviews"><a name="reviews"></a>
         <header>
           <div class="overlay-text-container">
             <h2 class="header">Reviews</h2>
@@ -125,7 +126,7 @@
             <cite>-<a href="http://www.yelp.com/biz/olympic-national-park-port-angeles?hrid=uWck8eI3cetvE2rkZFTpRg" class="tan">Michelle T.</a></cite></blockquote>
         </div>
       </section>
-      <section class="campgrounds">
+      <section class="campgrounds"><a name="campgrounds"></a>
         <header>
           <div class="overlay-text-container">
             <h2 class="header">Campgrounds</h2>
@@ -413,7 +414,7 @@
             </section>
           </div>
         </div>
-      </section>
+      </section><a name="newsletter"></a>
       <section class="newsletter">
         <div class="overlay-text-container">
           <h2 class="header">Newsletter</h2>
@@ -439,7 +440,9 @@
         </div>
       </section>
     </main>
-    <footer><a href="#" class="logo">Olympic</a><a href="#" class="about">About</a></footer>
+    <footer>
+      <div class="logo">Olympic</div><a href="#" class="about">About</a>
+    </footer>
     <script src="js/vendor/jquery-2.1.4.js"></script>
     <script src="js/app.js"></script>
   </body>
