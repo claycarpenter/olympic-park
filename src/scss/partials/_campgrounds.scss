@@ -141,7 +141,7 @@ section.campgrounds {
 // Icons
 
 @mixin camp-icon($icon-name) {
-  background-image: url(/images/#{$icon-name}-icon.svg);
+  background-image: url(../images/#{$icon-name}-icon.svg);
   background-repeat: no-repeat;
 
   $size: 30px;

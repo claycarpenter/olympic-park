@@ -5,12 +5,12 @@
 
   @include respond-to(small) {
     height: 390px;
-    background-image: url(/images/hero-bg-small.jpg);
+    background-image: url(../images/hero-bg-small.jpg);
   }
 
   @include respond-to(medium) {
     height: 630px;
-    background-image: url(/images/hero-bg-large.jpg);
+    background-image: url(../images/hero-bg-large.jpg);
   }
 
   .title {
