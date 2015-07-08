@@ -4,6 +4,14 @@ section.campgrounds {
 
   > header {
     height: 50px;
+
+    @include respond-to(medium) {
+      height: 75px;
+    }
+
+    @include respond-to(large) {
+      height: 90px;
+    }
   }
 
   .overlay-text-container .header {
@@ -32,14 +40,37 @@ section.campgrounds {
     @extend .container;
 
     margin-top: 10px;
+
+    @include respond-to(medium, true) {
+      .camp-card {
+        height: 480px;
+
+        &:nth-last-child(-n+2) {
+          height: auto;
+        }
+      }
+    }
+
+    @include respond-to(large) {
+      .camp-card {
+        height: 560px;
+
+        &:last-of-type {
+          height: auto;
+        }
+      }
+    }
   }
 }
 
 .camp-card section {
   border: 2px solid $dark-green;
   padding: 10px;
-//  height: 320px;
-  width: 320px;
+  width: $content-sm + 20px;
+
+  @include respond-to(medium) {
+    width: $content-md / 2 + 40px;
+  }
 
   margin: 20px auto;
 
@@ -47,22 +78,27 @@ section.campgrounds {
     margin: -33px auto 0 auto;
     background-color: $tan;
     border: 2px solid $dark-green;
+    text-align: center;
+
     height: 44px;
     width: 140px;
     font-size: 26px;
-    text-align: center;
     line-height: 44px;
 
     @include respond-to(medium) {
       margin-top: -43px;
-      width: 240px;
-      height: 60px;
+      width: 190px;
+      height: 50px;
+      font-size: 38px;
+      line-height: 54px;
     }
 
     @include respond-to(large) {
       margin-top: -46px;
-      width: 340px;
-      height: 70px;
+      width: 220px;
+      height: 50px;
+      font-size: 38px;
+      line-height: 54px;
     }
   }
 
@@ -72,6 +108,10 @@ section.campgrounds {
     text-align: center;
 
     width: 296px;
+
+    @include respond-to(medium) {
+      width: 335px;
+    }
   }
 
   .description {
@@ -116,6 +156,13 @@ section.campgrounds {
   background-size: $size;
   width: $size;
   height: $size;
+
+  @include respond-to(medium) {
+    $size: 35px;
+    background-size: $size;
+    width: $size;
+    height: $size;
+  }
 
   display: inline-block;
 }
